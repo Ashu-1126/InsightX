@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KavachG Command Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <main class="app-shell">
+    <section id="login-view" class="panel login-panel">
+      <div class="brand">KAVACHG</div>
+      <h1>Safety Command Center</h1>
+      <p class="muted">Unified safety intelligence for PPE, fire, and fall incident control.</p>
+      <form id="login-form" class="stack">
+        <label>Email</label>
+        <input id="login-email" type="email" required placeholder="admin@kavachg.com" />
+        <label>Password</label>
+        <input id="login-password" type="password" required placeholder="Enter password" />
+        <button id="login-btn" type="submit">Sign In</button>
+        <div id="login-error" class="error-text"></div>
+      </form>
+    </section>
+
+    <section id="app-view" class="hidden">
+      <header class="topbar panel">
+        <div>
+          <div class="brand">KAVACHG</div>
+          <div id="welcome-text" class="muted"></div>
+        </div>
+        <div class="actions">
+          <button data-tab="overview" class="nav-btn active">Overview</button>
+          <button data-tab="detection" class="nav-btn">Detection</button>
+          <button data-tab="incidents" class="nav-btn">Incidents</button>
+          <button data-tab="settings" class="nav-btn">Settings</button>
+          <button id="logout-btn" class="danger">Logout</button>
+        </div>
+      </header>
+
+      <section id="tab-overview" class="tab panel"></section>
+      <section id="tab-detection" class="tab panel hidden"></section>
+      <section id="tab-incidents" class="tab panel hidden"></section>
+      <section id="tab-settings" class="tab panel hidden"></section>
+    </section>
+  </main>
+
+  <script type="module" src="functions/app.js"></script>
+</body>
+</html>

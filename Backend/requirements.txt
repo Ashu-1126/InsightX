@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+opencv-python
+ultralytics
+numpy
+python-multipart
+python-jose
+passlib[bcrypt]
+bcrypt==3.2.2
+email-validator
+requests
+python-dotenv
+anthropic

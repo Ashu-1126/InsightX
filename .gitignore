@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# Database
+*.sqlite3
+*.db
+Database/incident_clips/
+Database/incident_images/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend
+Frontend/node_modules/
+dist/
+build/
+
+
+node_modules/
+.env
+dist/
+build/
+.next/
+*.log
+__pycache__/
+venv/

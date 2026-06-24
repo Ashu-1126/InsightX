@@ -1,0 +1,32 @@
+[
+  {
+    "path": "Models/Fall_Detection/yolov8s-pose.pt",
+    "url": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s-pose.pt",
+    "required": true,
+    "description": "Ultralytics YOLOv8 pose baseline"
+  },
+  {
+    "path": "Models/PPE-Detection/ppe.pt",
+    "url_env": "KAVACHG_PPE_MODEL_URL",
+    "required": true,
+    "description": "Custom PPE model"
+  },
+  {
+    "path": "Models/Fire_Smoke/Fire_Smoke/last.pt",
+    "url_env": "KAVACHG_FIRE_MODEL_URL",
+    "required": true,
+    "description": "Custom fire/smoke model"
+  },
+  {
+    "path": "Models/Pose/Pose/best.pt",
+    "url_env": "KAVACHG_POSE_BEST_MODEL_URL",
+    "required": true,
+    "description": "Optional custom pose best checkpoint"
+  },
+  {
+    "path": "Models/Pose/Pose/last.pt",
+    "url_env": "KAVACHG_POSE_LAST_MODEL_URL",
+    "required": true,
+    "description": "Optional custom pose last checkpoint"
+  }
+]

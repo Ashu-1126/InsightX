@@ -1,0 +1,22 @@
+{
+  "report_generated_at": "2026-04-02T15:32:01.379863Z",
+  "incident": {
+    "id": 6,
+    "type": "ppe",
+    "description": "ppe anomaly detected and persisted for 5s.",
+    "status": "Open",
+    "created_at": "2026-04-02 15:32:01",
+    "clip_path": "ppe_20260402_210201.mp4",
+    "source": "auto-monitoring",
+    "confidence": 0.9040796756744385,
+    "evidence_image": "ppe_20260402_210201.jpg",
+    "report_path": null
+  },
+  "summary": {
+    "id": 6,
+    "type": "ppe",
+    "status": "Open",
+    "created_at": "2026-04-02 15:32:01",
+    "source": "auto-monitoring"
+  }
+}
