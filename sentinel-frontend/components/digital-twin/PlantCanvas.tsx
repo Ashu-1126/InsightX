@@ -32,8 +32,8 @@ export default function PlantCanvas({ zoneScores }: PlantCanvasProps) {
 
     // Scene
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0a0a0f);
-    scene.fog = new THREE.FogExp2(0x0a0a0f, 0.04);
+    scene.background = new THREE.Color(0x000000);
+    scene.fog = new THREE.FogExp2(0x000000, 0.04);
 
     // Camera
     const camera = new THREE.PerspectiveCamera(55, container.clientWidth / container.clientHeight, 0.1, 200);
@@ -49,7 +49,7 @@ export default function PlantCanvas({ zoneScores }: PlantCanvasProps) {
     container.appendChild(renderer.domElement);
 
     // Lights
-    const ambient = new THREE.AmbientLight(0x1a1a2e, 2);
+    const ambient = new THREE.AmbientLight(0x1a0a0f, 2);
     scene.add(ambient);
     const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
     dirLight.position.set(10, 20, 10);
@@ -57,12 +57,12 @@ export default function PlantCanvas({ zoneScores }: PlantCanvasProps) {
     scene.add(dirLight);
 
     // Grid floor
-    const gridHelper = new THREE.GridHelper(30, 30, 0x2a2a3e, 0x1a1a2e);
+    const gridHelper = new THREE.GridHelper(30, 30, 0x3a1620, 0x1a0a0f);
     scene.add(gridHelper);
 
     // Floor plane
     const floorGeo = new THREE.PlaneGeometry(30, 20);
-    const floorMat = new THREE.MeshLambertMaterial({ color: 0x111118, transparent: true, opacity: 0.8 });
+    const floorMat = new THREE.MeshLambertMaterial({ color: 0x0d0608, transparent: true, opacity: 0.8 });
     const floor = new THREE.Mesh(floorGeo, floorMat);
     floor.rotation.x = -Math.PI / 2;
     floor.receiveShadow = true;
@@ -111,12 +111,12 @@ export default function PlantCanvas({ zoneScores }: PlantCanvasProps) {
       const ctx = canvas2d.getContext("2d")!;
       ctx.clearRect(0, 0, 256, 128);
       ctx.font = "bold 22px 'IBM Plex Mono', monospace";
-      ctx.fillStyle = severity === "critical" ? "#ef4444" : severity === "high" ? "#f97316" : "#94a3b8";
+      ctx.fillStyle = severity === "critical" ? "#ef4444" : severity === "high" ? "#f97316" : "#b8a0a6";
       ctx.textAlign = "center";
       const lines = zone.label.split("\n");
       lines.forEach((line, i) => ctx.fillText(line, 128, 36 + i * 28));
       ctx.font = "16px monospace";
-      ctx.fillStyle = "#e2e8f0";
+      ctx.fillStyle = "#ffffff";
       ctx.fillText(score ? `${score.risk_score}` : "0", 128, 96);
 
       const tex = new THREE.CanvasTexture(canvas2d);
@@ -137,7 +137,7 @@ export default function PlantCanvas({ zoneScores }: PlantCanvasProps) {
     for (const [x1, z1, x2, z2] of pipePositions) {
       const points = [new THREE.Vector3(x1, 0.1, z1), new THREE.Vector3(x2, 0.1, z2)];
       const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
-      const lineMat = new THREE.LineBasicMaterial({ color: 0x2a2a3e, transparent: true, opacity: 0.6 });
+      const lineMat = new THREE.LineBasicMaterial({ color: 0x6D001A, transparent: true, opacity: 0.6 });
       scene.add(new THREE.Line(lineGeo, lineMat));
     }
 

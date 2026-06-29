@@ -4,17 +4,18 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0a0a0f;
-  --surface: #111118;
-  --surface2: #1a1a2e;
-  --border: #2a2a3e;
-  --primary: #00d4ff;
-  --secondary: #7c3aed;
+  /* CAESAR palette: Black #000000 · Burgundy #6D001A · White #FFFFFF */
+  --bg: #000000;
+  --surface: #0d0608;
+  --surface2: #1a0a0f;
+  --border: #3a1620;
+  --primary: #6D001A;
+  --secondary: #a8324a;
   --warning: #f59e0b;
   --danger: #ef4444;
   --success: #10b981;
-  --muted: #94a3b8;
-  --text: #e2e8f0;
+  --muted: #b8a0a6;
+  --text: #ffffff;
 }
 
 * { box-sizing: border-box; }
@@ -38,7 +39,7 @@ html, body {
   }
   .card-glow {
     @apply card;
-    box-shadow: 0 0 0 1px rgba(0,212,255,0.08), 0 4px 24px rgba(0,0,0,0.4);
+    box-shadow: 0 0 0 1px rgba(109,0,26,0.25), 0 4px 24px rgba(0,0,0,0.6);
   }
   .badge-critical {
     @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-mono font-semibold bg-danger/20 text-danger border border-danger/30;
@@ -74,8 +75,8 @@ html, body {
     @apply text-lg font-semibold text-text;
   }
   .grid-bg {
-    background-image: linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(109,0,26,0.06) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(109,0,26,0.06) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 }
@@ -88,5 +89,5 @@ html, body {
 
 /* Recharts overrides */
 .recharts-wrapper svg { overflow: visible !important; }
-.recharts-cartesian-grid line { stroke: #2a2a3e; }
-.recharts-text { fill: #94a3b8; font-size: 11px; }
+.recharts-cartesian-grid line { stroke: #3a1620; }
+.recharts-text { fill: #b8a0a6; font-size: 11px; }

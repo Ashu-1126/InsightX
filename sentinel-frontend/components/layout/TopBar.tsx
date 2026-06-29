@@ -13,9 +13,12 @@ interface TopBarProps {
 
 export default function TopBar({ title, subtitle, activeEmergencies = [], wsConnected = true }: TopBarProps) {
   const [time, setTime] = useState<string>("");
-  const user = getCurrentUser();
+  // Read the user only after mount — getCurrentUser() reads localStorage, which is
+  // empty during SSR. Reading it during render causes a hydration mismatch.
+  const [user, setUser] = useState<ReturnType<typeof getCurrentUser>>(null);
 
   useEffect(() => {
+    setUser(getCurrentUser());
     const tick = () => setTime(new Date().toUTCString().slice(17, 25) + " UTC");
     tick();
     const id = setInterval(tick, 1000);

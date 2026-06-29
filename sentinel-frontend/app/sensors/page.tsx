@@ -19,7 +19,7 @@ const SENSOR_META: Record<string, { icon: React.ElementType; label: string; colo
   humidity:    { icon: Droplets,   label: "Humidity",    color: "#3b82f6" },
   smoke:       { icon: Wind,       label: "Smoke",       color: "#8b5cf6" },
   pressure:    { icon: Gauge,      label: "Pressure",    color: "#10b981" },
-  vibration:   { icon: Zap,        label: "Vibration",   color: "#00d4ff" },
+  vibration:   { icon: Zap,        label: "Vibration",   color: "#a8324a" },
 };
 
 const THRESHOLDS: Record<string, [number, number]> = {
@@ -87,8 +87,8 @@ function HistoryChart({ sensorId, stype, color }: { sensorId: string; stype: str
           <XAxis dataKey="t" tick={{ fontSize: 9 }} interval="preserveStartEnd" />
           <YAxis tick={{ fontSize: 9 }} />
           <Tooltip
-            contentStyle={{ background: "#111118", border: "1px solid #2a2a3e", fontSize: 11 }}
-            labelStyle={{ color: "#94a3b8" }}
+            contentStyle={{ background: "#0d0608", border: "1px solid #3a1620", fontSize: 11 }}
+            labelStyle={{ color: "#b8a0a6" }}
           />
           <ReferenceLine y={warn} stroke="#f59e0b" strokeDasharray="3 3" strokeWidth={1} />
           <ReferenceLine y={crit} stroke="#ef4444" strokeDasharray="3 3" strokeWidth={1} />
@@ -176,7 +176,7 @@ export default function SensorsPage() {
                 <HistoryChart
                   sensorId={`${zone.zone_id}_${selected.sensorType}`}
                   stype={selected.sensorType}
-                  color={SENSOR_META[selected.sensorType]?.color || "#00d4ff"}
+                  color={SENSOR_META[selected.sensorType]?.color || "#6D001A"}
                 />
               </div>
             )}

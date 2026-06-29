@@ -143,7 +143,7 @@ export default function ReplayPage() {
                 </defs>
                 <XAxis dataKey="t" tick={{ fontSize: 9 }} interval="preserveStartEnd" />
                 <YAxis domain={[0, 100]} tick={{ fontSize: 9 }} />
-                <Tooltip contentStyle={{ background: "#111118", border: "1px solid #2a2a3e", fontSize: 11 }} />
+                <Tooltip contentStyle={{ background: "#0d0608", border: "1px solid #3a1620", fontSize: 11 }} />
                 <ReferenceLine y={80} stroke="#ef4444" strokeDasharray="3 3" label={{ value: "CRITICAL", fontSize: 9, fill: "#ef4444" }} />
                 <ReferenceLine y={60} stroke="#f59e0b" strokeDasharray="3 3" label={{ value: "HIGH", fontSize: 9, fill: "#f59e0b" }} />
                 <Area type="monotone" dataKey="score" stroke="#ef4444" fill="url(#riskGrad)" strokeWidth={2} dot={false} />
@@ -208,7 +208,7 @@ export default function ReplayPage() {
                     <td className="py-1.5 pr-4 text-text">{ev.label}</td>
                     <td className="py-1.5 pr-4 text-muted font-mono">{ev.zone || "—"}</td>
                     <td className="py-1.5 pr-4">
-                      <span style={{ color: colorMap[ev.severity] || "#94a3b8" }} className="font-mono capitalize">
+                      <span style={{ color: colorMap[ev.severity] || "#b8a0a6" }} className="font-mono capitalize">
                         {ev.severity}
                       </span>
                     </td>

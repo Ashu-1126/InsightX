@@ -171,9 +171,6 @@ def init_db():
         c.execute("CREATE INDEX IF NOT EXISTS idx_incidents_created_at ON incidents(created_at)")
         c.execute("CREATE INDEX IF NOT EXISTS idx_incidents_status ON incidents(status)")
         c.execute("CREATE INDEX IF NOT EXISTS idx_incidents_type ON incidents(type)")
-        c.execute("CREATE INDEX IF NOT EXISTS idx_risk_assessments_active ON risk_assessments(is_active, created_at)")
-        c.execute("CREATE INDEX IF NOT EXISTS idx_emergency_events_status ON emergency_events(status, created_at)")
-        c.execute("CREATE INDEX IF NOT EXISTS idx_permits_status_zone ON permits(status, zone_id)")
 
         # ── SENTINEL AI: PERMITS ─────────────────────────────────────────────
         c.execute("""CREATE TABLE IF NOT EXISTS permits (
@@ -225,6 +222,11 @@ def init_db():
             resolved_at TEXT,
             FOREIGN KEY (risk_assessment_id) REFERENCES risk_assessments(id)
         )""")
+
+        # Indexes for tables defined above (created after their tables exist)
+        c.execute("CREATE INDEX IF NOT EXISTS idx_permits_status_zone ON permits(status, zone_id)")
+        c.execute("CREATE INDEX IF NOT EXISTS idx_risk_assessments_active ON risk_assessments(is_active, created_at)")
+        c.execute("CREATE INDEX IF NOT EXISTS idx_emergency_events_status ON emergency_events(status, created_at)")
 
         # ── SENTINEL AI: KNOWLEDGE BASE ───────────────────────────────────────
         c.execute("""CREATE TABLE IF NOT EXISTS knowledge_base (

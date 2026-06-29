@@ -202,10 +202,10 @@ export default function RiskPage() {
               <h2 className="section-title mb-4">Zone Risk Radar</h2>
               <ResponsiveContainer width="100%" height={220}>
                 <RadarChart data={radarData}>
-                  <PolarGrid stroke="#2a2a3e" />
-                  <PolarAngleAxis dataKey="zone" tick={{ fontSize: 10, fill: "#94a3b8" }} />
+                  <PolarGrid stroke="#3a1620" />
+                  <PolarAngleAxis dataKey="zone" tick={{ fontSize: 10, fill: "#b8a0a6" }} />
                   <Radar name="Risk" dataKey="score" stroke="#ef4444" fill="#ef4444" fillOpacity={0.15} />
-                  <Tooltip contentStyle={{ background: "#111118", border: "1px solid #2a2a3e", fontSize: 11 }} />
+                  <Tooltip contentStyle={{ background: "#0d0608", border: "1px solid #3a1620", fontSize: 11 }} />
                 </RadarChart>
               </ResponsiveContainer>
             </div>

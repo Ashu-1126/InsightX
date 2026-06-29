@@ -9,17 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0a0a0f",
-        surface: "#111118",
-        surface2: "#1a1a2e",
-        border: "#2a2a3e",
-        text: "#e2e8f0",
-        primary: "#00d4ff",
-        secondary: "#7c3aed",
+        // CAESAR palette: Black #000000 · Burgundy #6D001A · White #FFFFFF
+        bg: "#000000",
+        surface: "#0d0608",
+        surface2: "#1a0a0f",
+        border: "#3a1620",
+        text: "#ffffff",
+        primary: "#6D001A",
+        secondary: "#a8324a",
         warning: "#f59e0b",
         danger: "#ef4444",
         success: "#10b981",
-        muted: "#94a3b8",
+        muted: "#b8a0a6",
       },
       fontFamily: {
         mono: ["IBM Plex Mono", "monospace"],
@@ -32,13 +33,13 @@ const config: Config = {
       },
       keyframes: {
         glow: {
-          "0%": { boxShadow: "0 0 5px #00d4ff40" },
-          "100%": { boxShadow: "0 0 20px #00d4ff80, 0 0 40px #00d4ff30" },
+          "0%": { boxShadow: "0 0 5px #6D001A40" },
+          "100%": { boxShadow: "0 0 20px #6D001A99, 0 0 40px #6D001A40" },
         },
       },
       backgroundImage: {
         "grid-pattern":
-          "linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px)",
+          "linear-gradient(rgba(109,0,26,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(109,0,26,0.06) 1px, transparent 1px)",
       },
       backgroundSize: {
         "grid-sm": "40px 40px",

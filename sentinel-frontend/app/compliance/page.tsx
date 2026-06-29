@@ -62,7 +62,7 @@ function ScoreRing({ score }: { score: number }) {
   return (
     <div className="relative inline-flex items-center justify-center w-36 h-36">
       <svg className="w-36 h-36 -rotate-90" viewBox="0 0 120 120">
-        <circle cx="60" cy="60" r={r} stroke="#2a2a3e" strokeWidth="10" fill="none" />
+        <circle cx="60" cy="60" r={r} stroke="#3a1620" strokeWidth="10" fill="none" />
         <circle
           cx="60" cy="60" r={r} stroke={color} strokeWidth="10" fill="none"
           strokeDasharray={`${dash} ${circ}`} strokeLinecap="round"

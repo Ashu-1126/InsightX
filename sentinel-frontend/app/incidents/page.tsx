@@ -129,7 +129,7 @@ export default function IncidentsPage() {
                         load();
                       }}
                       style={{
-                        color: inc.status === "Open" ? "#f59e0b" : inc.status === "Closed" ? "#10b981" : "#00d4ff",
+                        color: inc.status === "Open" ? "#f59e0b" : inc.status === "Closed" ? "#10b981" : "#a8324a",
                       }}
                     >
                       <option value="Open">Open</option>
